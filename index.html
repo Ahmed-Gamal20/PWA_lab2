@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  <script type="text/javascript" src="js/idb.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <title>Couches-N-Things</title>
+</head>
+
+<body>
+  <h1>Couches-N-Things</h1>
+  <button id="addProducts" onclick="idbApp.addProducts()">Add Products</button></br></br>
+  <h2>Search Products</h2>
+  By Name: <input type="text" id="name" placeholder="Name"> <button id="byName"
+    onclick="idbApp.displayByName()">Search</button></br></br>
+    <div>
+      <h3>Search by Price</h3>
+      <label for="priceLower">Price Lower Bound:</label>
+      <input type="number" id="priceLower">
+      <label for="priceUpper">Price Upper Bound:</label>
+      <input type="number" id="priceUpper">
+      <button onclick="idbApp.displayByPrice()">Search by Price</button>
+    </div>
+    
+    <div>
+      <h3>Search by Description</h3>
+      <label for="desc">Description:</label>
+      <input type="text" id="desc">
+      <button onclick="idbApp.displayByDesc()">Search by Description</button>
+    </div>
+    
+    <div id="results">
+
+    </div>
+    
+  <h2>Orders</h2>
+  <button id="addOrders" onclick="idbApp.addOrders()">Add Orders</button></br></br>
+  <button id="showOrders" onclick="idbApp.showOrders()">Show Orders</button></br></br>
+  <div id="orders"></div>
+  <button id="fulfill" onclick="idbApp.fulfillOrders()">Fulfill</button></br></br>
+  <div id="receipt"></div>
+
+
+</body>
+
+</html>
